@@ -1,0 +1,240 @@
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123  -456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Obaida Kandakji} \\ \vspace{1pt}
+    \small (613)-608-3883 $|$ 
+    {\small obaidakandakji@gmail.com} $|$ 
+    {\small linkedin.com/in/obaidakandakji/} $|$
+    {\small github.com/ObaidaKandakji}
+\end{center}
+
+%-----------Professional Summary---
+\section{Professional Summary}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{Motivated Computer Engineering student with hands-on experience in full-stack development, specializing in Python, Java, SQL, and cloud-based technologies. Skilled in building and optimizing scalable software solutions, with knowledge of microservices, data analysis, and DevOps tools like Docker and Kubernetes. Proven ability to work collaboratively in agile environments, delivering high-quality, well-tested code through problem-solving and project-based initiatives. Passionate about continuous learning and eager to contribute to innovative projects that drive real-world impact.}}
+    \end{itemize}
+
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, Java, SQL, HTML/CSS, C++, VB.NET, VHDL/Verilog, Assembly}\\
+     \textbf{Spoken Languages}{: English, French, Arabic} \\ 
+     \textbf{Developer Tools}{: Git, VS Code, Azure, Docker, Kubernetes, linux, Node.js, PyCharm, IntelliJ, npm, chocolatey, VMware, Android Studios, Eclipse} \\
+    }}
+ \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {Algonquin College}{}
+            {Graduate Certificate in Cloud Development and Operations}{September 2025 -- April 2026}
+    \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {University of Ottawa}{}
+            {Bachelor of Applied Science in Computer Engineering}{September 2020 -- April 2025}
+    \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {University of Ottawa}{}
+            {Bachelor of Science in Biochemistry}{September 2017 -- April 2020}
+    \resumeSubHeadingListEnd
+
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    
+    \resumeProjectHeading
+          {\textbf{Microservices E Commerce Platform} $|$ \emph{Azure AKS}}{}
+            \resumeItemListStart
+            \resumeItem{Deployed a cloud-native e-commerce microservices app on Azure AKS using Cosmos DB, Blob Storage, and Service Bus with 2 queues, reducing order-processing failures by 20\% during traffic spikes.}
+            \resumeItem{Automated Azure provisioning with ARM templates for an AKS deployment, VM scale sets, and storage accounts, cutting environment setup to under 30 minutes.}
+            \resumeItem{Built GitHub Actions CI/CD to publish 6 Docker images to Docker Hub and deploy to AKS on merge, reducing releases from about 30 minutes to under 5 minutes and supporting multiple deploys per day.}
+          \resumeItemListEnd 
+
+    \resumeProjectHeading
+          {\textbf{Service Workflow Automation App} $|$ \emph{Java, XML, Android Studio, Git}}{}
+            \resumeItemListStart
+            \resumeItem{Developed and deployed a custom Android application to automate busser seating workflows, reducing table-readiness delays by optimizing staff handoffs during peak hours.}
+            \resumeItem{Applied mobile UI design principles using XML to create an intuitive interface for real-time communication between front-of-house and support staff.}
+            \resumeItem{Managed the full development lifecycle from requirement gathering to on-site deployment, resulting in measurable improvements in guest turnover rates.}
+          \resumeItemListEnd
+    
+    \resumeProjectHeading
+          {\textbf{AI-Powered Smart Dumbbell System} $|$ \emph{Python}}{}
+            \resumeItemListStart
+            \resumeItem{Implemented real-time joint tracking and form analysis, accurately tracking 15 body joints using OpenCV, which improved exercise form validation by 30\%}
+            \resumeItem{Developed machine learning algorithm to estimate caloric expenditure based on biometric data and exercise intensity, offering personalized fitness insights.}
+            \resumeItem{Reduced sensor data noise by 40\% through the application of a Kalman filter, increasing the reliability of movement and rep measurements.}
+          \resumeItemListEnd 
+          
+    \resumeProjectHeading
+          {\textbf{Self-Driving Car} $|$ \emph{JavaScript}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a 2-D self-driving car simulation in pure JavaScript, successfully implementing autonomous navigation without the use of external libraries.}
+            \resumeItem{Optimized simulation processes by leveraging parallelization, enabling over 100 cars to be trained simultaneously, which cut project completion time by 60\%.}
+            \resumeItem{Enhanced simulation efficiency by implementing genetic algorithms, ensuring the inheritance of top-performing traits, resulting in a 30\% increase in obstacle navigation success.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Server}{Sept 2018 -- Present}
+      {Cora's}{}
+      \resumeItemListStart
+        \resumeItem{Delivered fast, accurate table service in a high-volume environment by taking orders, coordinating with kitchen, and proactively addressing guest needs to ensure a smooth end-to-end dining experience.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+%    \resumeSubheading
+%      {Computer Technician}{June 2019 -- Present}
+%      {Self}{}
+%      \resumeItemListStart
+%        \resumeItem{Designed and assembled custom high-performance computers, tailored to client specifications, increasing system efficiency and performance by 10\%.}
+%        \resumeItem{Performed comprehensive testing and quality assurance on all builds, ensuring optimal functionality and extended system longevity.}
+%    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\end{document}
+
+
+      %\resumeProjectHeading
+        %  {\textbf{Microsoft AI Copilot Hackathon} $|$ \emph{Python}}{}
+        %    \resumeItemListStart
+        %    \resumeItem{Integrated natural language processing (NLP) into an AI copilot, achieving 90\% accuracy in understanding and responding to user queries, significantly enhancing user experience.}
+        %    \resumeItem{Streamlined the development process by deploying vCore-based Azure Cosmos DB for MongoDB, reducing setup and deployment time by 40\%.}
+        %    \resumeItem{Optimized AI performance by implementing best practices in database management, leading to a 20\% improvement in overall system efficiency.}
+        %  \resumeItemListEnd 
+        % \resumeProjectHeading
+        %  {\textbf{FRC Robot} $|$ \emph{C++}}{}
+        %   \resumeItemListStart
+        %     \resumeItem{Led the development of robot movement controls for a competitive FRC project, achieving seamless terrain adaptation and outperforming rivals in navigation challenges.}
+        %     \resumeItem{Awarded the prestigious Judges Award for exceptional code quality, through adherence to best coding practices and meticulous performance optimization.}
+        %     \resumeItem{Engineered a high-performing robot on a budget, utilizing less than 30\% of the funds of competitors, demonstrating team resourcefulness and ingenuity.}
+        %   \resumeItemListEnd
+
+
+
+
