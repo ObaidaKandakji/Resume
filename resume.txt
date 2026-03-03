@@ -103,7 +103,7 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Obaida Kandakji} \\ \vspace{1pt}
+    \textbf{\Huge \scshape obaida kandakji} \\ \vspace{1pt}
     \small (613)-608-3883 $|$ 
     {\small obaidakandakji@gmail.com} $|$ 
     {\small linkedin.com/in/obaidakandakji/} $|$
@@ -113,7 +113,8 @@
 %-----------Professional Summary---
 \section{Professional Summary}
     \begin{itemize}[leftmargin=0.15in, label={}]
-        \small{\item{Motivated Computer Engineering student with hands-on experience in full-stack development, specializing in Python, Java, SQL, and cloud-based technologies. Skilled in building and optimizing scalable software solutions, with knowledge of microservices, data analysis, and DevOps tools like Docker and Kubernetes. Proven ability to work collaboratively in agile environments, delivering high-quality, well-tested code through problem-solving and project-based initiatives. Passionate about continuous learning and eager to contribute to innovative projects that drive real-world impact.}}
+      %Motivated Computer Engineering student with hands-on experience in full-stack development, specializing in Python, Java, SQL, and cloud-based technologies. Skilled in building and optimizing scalable software solutions, with knowledge of microservices, data analysis, and DevOps tools like Docker and Kubernetes. Proven ability to work collaboratively in agile environments, delivering high-quality, well-tested code through problem-solving and project-based initiatives. Passionate about continuous learning and eager to contribute to innovative projects that drive real-world impact.
+        \small{\item{I am a Computer Engineering graduate with a background in Biochemistry and a genuine interest in how software can solve real-world problems. Currently specializing in Cloud Development, I enjoy the process of learning a tool, whether it’s building autonomous driving simulations in JavaScript or managing infrastructure on Azure, and immediately putting it to work. Years of experience in fast-paced service roles have taught me how to stay organized and collaborate under pressure. I’m looking to bring that same work ethic and a constant learner mindset to an innovative development team.}}
     \end{itemize}
 
 
@@ -122,9 +123,10 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, JavaScript, Java, SQL, HTML/CSS, C++, VB.NET, VHDL/Verilog, Assembly}\\
-     \textbf{Spoken Languages}{: English, French, Arabic} \\ 
-     \textbf{Developer Tools}{: Git, VS Code, Azure, Docker, Kubernetes, linux, Node.js, PyCharm, IntelliJ, npm, chocolatey, VMware, Android Studios, Eclipse} \\
+     \textbf{Languages:}{ Python, Java, JavaScript, Rust, Go, SQL, C++, HTML/CSS, VHDL, Assembly}\\
+     \textbf{Cloud \& Devops:}{ Azure, Docker, Kubernetes, GitHub Actions, Linux, ARM Templates}\\
+     \textbf{Frameworks \& Libraries:}{ Node.js, Vue.js, OpenCV, RabbitMQ, MongoDB}\\
+     \textbf{Spoken Languages:}{ English, French, Arabic} \\ 
     }}
  \end{itemize}
 
@@ -193,7 +195,8 @@
       {Server}{Sept 2018 -- Present}
       {Cora's}{}
       \resumeItemListStart
-        \resumeItem{Delivered fast, accurate table service in a high-volume environment by taking orders, coordinating with kitchen, and proactively addressing guest needs to ensure a smooth end-to-end dining experience.}
+        \resumeItem{Managed busy section of several tables at once, multitasking between taking orders and checking in on guests to ensure everyone is served quickly and accurately.}
+        \resumeItem{Worked closely with the kitchen and other servers to stay organized during the morning rush, helping the team stay on track so every guest has a smooth dining experience.}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
