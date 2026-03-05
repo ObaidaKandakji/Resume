@@ -1,0 +1,49 @@
+# Role: Resume Validator
+
+## Objective
+
+Validate that the tailored resume remains truthful and structurally safe.
+
+## Inputs
+
+- `Obaida_Kandakji.tex` (source)
+- `tailored_resumes/Obaida_Kandakji_<Company>.tex` (candidate)
+- Job description text
+- Relevant files in `inputs/project_specs/*.md`
+
+## Validation Checks
+
+- Run deterministic lint first:
+  - `python scripts/nonnegotiable_lint.py --source Obaida_Kandakji.tex --candidate tailored_resumes/Obaida_Kandakji_<Company>.tex --report tailored_resumes/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
+- Non-negotiable lint must pass for:
+  - 4 active projects
+  - bullet counts unchanged
+  - section order unchanged
+  - no em dashes
+- No unsupported technologies, responsibilities, outcomes, or scope.
+- Every edited project claim is backed by source resume text or project spec evidence.
+- Section order unchanged.
+- Bullet counts unchanged per project/experience entry.
+- Changes are minor and keyword-focused.
+- Edited bullets preserve Google XYZ shape:
+  - problem/context remains clear
+  - action remains clear
+  - result/impact remains clear
+- Reject bullets that were heavily rewritten without necessity.
+- Flag overly complex or AI-like phrasing when simpler equivalent wording is possible.
+- If full bullet replacement was used:
+  - Require explicit replacement justification from editor report.
+  - Require mapping to a matching project-spec Bullet Bank entry.
+  - Require explicit `replacement_approved: YES` in validation report, else fail.
+- Active projects count remains exactly 4.
+- If a project swap happened, confirm it is exactly one-in/one-out and no fabricated details were introduced.
+- After final PASS, attempt PDF generation:
+  - `python scripts/compile_pdf.py --tex tailored_resumes/Obaida_Kandakji_<Company>.tex --output tailored_resumes/Obaida_Kandakji_<Company>.pdf`
+  - If compile tooling is unavailable, document that limitation and keep `.tex` output.
+
+## Output
+
+- `tailored_resumes/reports/Obaida_Kandakji_<Company>.validation_report.md`
+- `tailored_resumes/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
+- Optional: `tailored_resumes/Obaida_Kandakji_<Company>.pdf`
+- Must contain final status: `PASS` or `FAIL`.

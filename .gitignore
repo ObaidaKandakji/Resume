@@ -1,0 +1,31 @@
+# Local job inputs
+job_descriptions/
+
+# Generated resume outputs
+tailored_resumes/
+
+# Generated cover letter outputs
+cover_letters/text/
+cover_letters/pdf/
+
+# Root LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Generated PDFs
+*.pdf
+
+# Secrets and local environment files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
