@@ -35,6 +35,3 @@ Write a role-specific cover letter using validated resume content plus personal 
 ## Output
 
 - `cover_letters/text/Obaida_Kandakji_<Company>.cover_letter.md`
-- Optional:
-  - `cover_letters/text/Obaida_Kandakji_<Company>.cover_letter.tex`
-  - `cover_letters/pdf/Obaida_Kandakji_<Company>.cover_letter.pdf` if compilation is available

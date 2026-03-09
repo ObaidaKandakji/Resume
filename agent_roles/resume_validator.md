@@ -42,13 +42,9 @@ Validate that the tailored resume remains truthful and structurally safe.
   - Require explicit `replacement_approved: YES` in validation report, else fail.
 - Active projects count remains exactly 4.
 - If a project swap happened, confirm it is exactly one-in/one-out and no fabricated details were introduced.
-- After final PASS, attempt PDF generation:
-  - `python scripts/compile_pdf.py --tex tailored_resumes/Obaida_Kandakji_<Company>.tex --output tailored_resumes/Obaida_Kandakji_<Company>.pdf`
-  - If compile tooling is unavailable, document that limitation and keep `.tex` output.
 
 ## Output
 
 - `tailored_resumes/reports/Obaida_Kandakji_<Company>.validation_report.md`
 - `tailored_resumes/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
-- Optional: `tailored_resumes/Obaida_Kandakji_<Company>.pdf`
 - Must contain final status: `PASS` or `FAIL`.

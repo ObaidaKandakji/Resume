@@ -17,10 +17,6 @@ Resume policy:
   - Checks: 4 active projects, unchanged bullet counts, unchanged section order, and no em dashes.
   - Does not require `latexmk`.
 
-Optional resume PDF generation:
-- `python scripts/compile_pdf.py --tex tailored_resumes/Obaida_Kandakji_<Company>.tex --output tailored_resumes/Obaida_Kandakji_<Company>.pdf`
-- The agent can run this automatically when compiler tooling is available.
-
 Project context policy:
 - Use structured project specs, not loose summaries.
 - Specs live in `inputs/project_specs/`.
@@ -60,12 +56,8 @@ Save all outputs with the correct company token.
   - `tailored_resumes/reports/Obaida_Kandakji_<Company>.validation_report.md`
 - Non-negotiable lint report:
   - `tailored_resumes/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
-- Optional tailored resume PDF:
-  - `tailored_resumes/Obaida_Kandakji_<Company>.pdf`
 - Cover letter text:
   - `cover_letters/text/Obaida_Kandakji_<Company>.cover_letter.md`
-- Optional cover letter PDF:
-  - `cover_letters/pdf/Obaida_Kandakji_<Company>.cover_letter.pdf`
 
 Generated outputs in `job_descriptions/`, `tailored_resumes/`, and `cover_letters/` are gitignored by default (local-only).
 

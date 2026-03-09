@@ -133,15 +133,9 @@ Checks:
   - Exactly one project in and one project out.
   - No fabricated project details introduced during swap.
 
-After validation passes:
-- Attempt resume PDF generation:
-  - `python scripts/compile_pdf.py --tex tailored_resumes/Obaida_Kandakji_<Company>.tex --output tailored_resumes/Obaida_Kandakji_<Company>.pdf`
-- If no compiler is available, keep `.tex` and report the limitation.
-
 Output:
 - `tailored_resumes/reports/Obaida_Kandakji_<Company>.validation_report.md`
 - `tailored_resumes/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
-- Optional: `tailored_resumes/Obaida_Kandakji_<Company>.pdf`
 
 If validation fails:
 - Revise tailored file once.
@@ -173,16 +167,9 @@ Rules:
 Primary output:
 - `cover_letters/text/Obaida_Kandakji_<Company>.cover_letter.md`
 
-Optional PDF output:
-- Also write `cover_letters/text/Obaida_Kandakji_<Company>.cover_letter.tex`
-- If LaTeX tools are available, compile to:
-  - `cover_letters/pdf/Obaida_Kandakji_<Company>.cover_letter.pdf`
-- If compile tool is unavailable, keep `.md` and `.tex` only and report that limitation.
-
 ## Required Final Summary
 
 After all stages, provide:
 - Paths to all generated files
 - Keywords added and skipped
 - Validation pass/fail result
-- Whether PDF generation succeeded
