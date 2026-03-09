@@ -39,4 +39,6 @@ I am highly motivated by engineering work connected to aviation, aerospace, and 
 
 - Use at most 1-2 personal details from this profile.
 - Keep tone natural and specific, not generic or over-polished.
+- Sound like an enthusiastic student or recent graduate, not an essayist.
+- Prefer simple, grounded wording over lofty language.
 - Do not include unrelated hobbies unless they clearly add value to role fit.

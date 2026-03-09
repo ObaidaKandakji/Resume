@@ -1,6 +1,6 @@
 # Resume Workflow Agent
 
-These instructions define a 3-stage pipeline for Codex in this repository.
+These instructions define a 4-stage pipeline for Codex in this repository.
 
 ## Capability Note
 
@@ -18,6 +18,9 @@ These instructions define a 3-stage pipeline for Codex in this repository.
 - Project evidence specs:
   - `inputs/project_specs/*.md`
   - Treat these as the primary source of project-level claim validity.
+- Section-specific writing guides:
+  - `inputs/section_rules/*.md`
+  - `inputs/section_rules/professional_summary.md` is the primary quality guide for the Professional Summary.
 - Optional project-candidate blocks in source comments:
   - Recommended marker format:
     - `% OPTIONAL_PROJECT_START: TCP_Networking`
@@ -29,6 +32,46 @@ These instructions define a 3-stage pipeline for Codex in this repository.
 - `Company` token must be letters/numbers/underscore only.
 - If unknown, use job file stem or `UnknownCompany`.
 - Base prefix is always `Obaida_Kandakji`.
+- Per-company output directory:
+  - `tailored_resumes/<Company>/`
+  - Create this folder (and `tailored_resumes/<Company>/reports/`) before writing outputs.
+
+## Stage 0: Company Research
+
+Goal: gather high-signal company context to improve resume keyword prioritization and cover-letter angle.
+
+Research scope:
+- Company mission and positioning
+- Core products/services
+- Business domain and customer focus
+- Engineering signals relevant to the role (if available)
+- Tone/culture clues from official company pages and job posting language
+
+Source rules:
+- Prefer official sources first:
+  - company website
+  - careers pages
+  - official blog/newsroom
+- Use the job posting itself as a primary context source.
+- Avoid forum/speculation sources unless absolutely necessary.
+- Do not invent company facts; mark unknown items as `UNVERIFIED`.
+- Include source links in the `Sources` section for each major company claim used downstream.
+
+Output:
+- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
+
+Required sections in research output:
+- `Company Snapshot`
+- `Mission and What They Do`
+- `Role-Relevant Signals`
+- `Language/Tone Cues To Mirror`
+- `Resume Angle Recommendations`
+- `Cover Letter Angle Recommendations`
+- `Sources`
+
+Handoff rule:
+- Stage 1 and Stage 3 must use this research file for company-specific positioning.
+- Resume edits should use this primarily to prioritize emphasis, not to inject unsupported company claims into resume bullets.
 
 ## Stage 1: Resume Tailor
 
@@ -46,6 +89,14 @@ Rules:
   - Projects
   - Experience
 - Preserve existing bullet writing style (Google XYZ format).
+- Professional Summary rule:
+  - Read `inputs/section_rules/professional_summary.md` before editing the summary.
+  - The summary may be rewritten more freely than bullets when needed to remove generic language and align to the role.
+  - Keep it to 2-3 sentences and roughly 35-60 words.
+  - No first person, no cliches, and no generic objective language.
+  - Include the target role title, 2-3 supported JD keywords, and 1 concrete proof point when truthfully possible.
+  - Mention only tools and claims supported elsewhere in the resume or project specs.
+  - If a better summary cannot be written without filler or unsupported claims, shorten or lightly revise it instead of forcing a generic rewrite.
 - Google XYZ rule for project bullets:
   - Keep the same underlying structure: problem/context, what was done, and result/impact.
   - If the original bullet contains a metric/result, keep it unless clearly invalid.
@@ -75,9 +126,11 @@ Rules:
 - Never fabricate tools, responsibilities, outcomes, or impact.
 - Unsupported keywords must be skipped and documented.
 - Before writing edits, read relevant project spec cards and map JD keywords to spec-backed claims.
+- Before writing edits, read the company research report and prioritize role/company-relevant evidence from the resume.
 - Do not introduce project-specific keywords unless supported by:
   - current resume text, or
   - a project spec card with explicit evidence.
+- Do not add company-specific factual claims into resume bullets unless directly relevant and fully verified.
 - One-page constraint is mandatory.
 - Active projects target is exactly 4.
 - Project swap rule (for commented candidate projects):
@@ -96,8 +149,15 @@ Rules:
       - `Result: ...`
 
 Output:
-- `tailored_resumes/Obaida_Kandakji_<Company>.tex`
-- `tailored_resumes/reports/Obaida_Kandakji_<Company>.tailor_report.md`
+- `tailored_resumes/<Company>/Obaida_Kandakji_<Company>.tex`
+- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.tailor_report.md`
+
+Tailor report requirement:
+- If the Professional Summary changed, include:
+  - `target_role_phrase`
+  - `jd_keywords_used`
+  - `proof_point_used`
+  - `proof_source`
 
 ## Stage 2: Resume Validator
 
@@ -105,7 +165,7 @@ Goal: verify Stage 1 output is truthful and structurally safe.
 
 Deterministic gate (run first):
 - Run:
-  - `python scripts/nonnegotiable_lint.py --source Obaida_Kandakji.tex --candidate tailored_resumes/Obaida_Kandakji_<Company>.tex --report tailored_resumes/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
+  - `python scripts/nonnegotiable_lint.py --source Obaida_Kandakji.tex --candidate tailored_resumes/<Company>/Obaida_Kandakji_<Company>.tex --report tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
 - This hard-checks non-negotiables only:
   - 4 active projects
   - bullet counts unchanged
@@ -115,6 +175,16 @@ Deterministic gate (run first):
 Checks:
 - Compare source resume vs tailored resume.
 - Flag any unsupported claim, inflated scope, or invented keyword mapping.
+- Verify any company-specific phrasing is traceable to the company research report and not fabricated.
+- Verify the Professional Summary follows `inputs/section_rules/professional_summary.md`:
+  - 2-3 sentences
+  - roughly 35-60 words
+  - no first person
+  - no cliches or generic objective language
+  - includes a supported target-role phrase
+  - includes 2-3 supported JD keywords when feasible
+  - includes 1 concrete proof point
+  - mentions only supported tools and claims
 - Verify section order and bullet counts remain unchanged.
 - Verify edited project bullets still follow Google XYZ shape (problem/context + action + result).
 - Verify edited bullets were minimally changed rather than fully rewritten, unless explicitly justified.
@@ -134,8 +204,8 @@ Checks:
   - No fabricated project details introduced during swap.
 
 Output:
-- `tailored_resumes/reports/Obaida_Kandakji_<Company>.validation_report.md`
-- `tailored_resumes/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
+- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.validation_report.md`
+- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
 
 If validation fails:
 - Revise tailored file once.
@@ -146,15 +216,21 @@ If validation fails:
 Goal: produce a tailored cover letter using validated resume + personal profile.
 
 Rules:
+- Read `inputs/section_rules/cover_letter.md` before drafting.
 - Use only claims supported by source/tailored resume and user profile.
+- Use company research output to tailor positioning, motivation framing, and company-specific language.
 - Use project spec cards to choose the strongest relevant project evidence.
 - Prioritize 2-3 most relevant projects/skills for the target role.
-- Keep concise, professional, and specific to company/job.
+- Keep concise, professional, specific to company/job, and clearly early-career in voice.
+- Write an actual letter with greeting, body paragraphs, and sign-off.
 - Human-sounding writing only:
   - Never use em dashes (`—`).
   - Avoid AI-generic phrasing (for example: "I am excited to apply", "I am writing to express", "passionate about leveraging", "fast-paced environment", "team player").
   - Prefer concrete, plain sentences over hype.
   - Vary sentence structure and length naturally.
+  - Sound like a strong student or recent graduate, not a philosopher, essayist, or senior engineer.
+  - Prefer simple, grounded wording over elevated or intellectual phrasing.
+  - Keep confidence modest and let evidence carry the argument.
 - Personal-profile usage constraint:
   - Use at most 1-2 personal details from `inputs/personal_profile.md`.
   - Select only details that directly strengthen fit for the specific role.
@@ -163,6 +239,11 @@ Rules:
   - No em dash characters.
   - No unsupported claims.
   - No more than 2 personal details included.
+  - Any company-specific statement is supported by the research report.
+  - Greeting and sign-off are present.
+  - At least 1 company-specific sentence is present.
+  - At least 1 candidate-specific sentence is present.
+  - The voice sounds like an enthusiastic early-career applicant.
 
 Primary output:
 - `cover_letters/text/Obaida_Kandakji_<Company>.cover_letter.md`
@@ -173,3 +254,7 @@ After all stages, provide:
 - Paths to all generated files
 - Keywords added and skipped
 - Validation pass/fail result
+- Summary audit:
+  - target-role phrase used
+  - JD keywords mirrored in summary
+  - proof point used in summary

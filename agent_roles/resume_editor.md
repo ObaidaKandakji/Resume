@@ -9,7 +9,9 @@ Write with a senior-recruiter lens: clear, specific, and value-first.
 
 - `Obaida_Kandakji.tex`
 - Job description text
+- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
 - Relevant files in `inputs/project_specs/*.md`
+- `inputs/section_rules/professional_summary.md`
 
 ## Hard Limits
 
@@ -20,6 +22,8 @@ Write with a senior-recruiter lens: clear, specific, and value-first.
 - One-page resume only.
 - Keep exactly 4 active projects.
 - Any project keyword added to bullets must be supported by resume text or project spec evidence.
+- Use company research to prioritize what to emphasize for this role/company.
+- Do not add company-specific factual claims into resume bullets unless verified and necessary.
 - Preserve existing project bullet style using Google XYZ:
   - Problem/context
   - Action taken
@@ -28,6 +32,14 @@ Write with a senior-recruiter lens: clear, specific, and value-first.
   - Prefer targeted keyword swaps and small phrasing adjustments.
   - Avoid full bullet rewrites unless required for factual correctness.
   - Keep most original wording whenever possible.
+- Professional Summary-specific rule:
+  - Read `inputs/section_rules/professional_summary.md` before editing the summary.
+  - The summary may be rewritten more freely than bullets if needed to remove generic language and sharpen role fit.
+  - Keep the summary at 2-3 sentences and roughly 35-60 words.
+  - No first person, no cliches, and no generic objective language.
+  - Include the target role title, 2-3 supported JD keywords, and 1 concrete proof point when possible.
+  - Mention only supported tools and claims already present in the resume or project specs.
+  - If a high-quality rewrite is not possible without filler, keep the summary tighter rather than broader.
 - Recruiter-focused style constraints:
   - Avoid generic filler lines (for example: "responsible for", "worked on", "helped with").
   - Reduce unnecessary jargon and keep wording easy to scan quickly.
@@ -47,11 +59,16 @@ Write with a senior-recruiter lens: clear, specific, and value-first.
 
 ## Output
 
-- `tailored_resumes/Obaida_Kandakji_<Company>.tex`
-- `tailored_resumes/reports/Obaida_Kandakji_<Company>.tailor_report.md`
+- `tailored_resumes/<Company>/Obaida_Kandakji_<Company>.tex`
+- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.tailor_report.md`
 
 Report requirement:
 - For each edited bullet, include a brief XYZ mapping (Problem/Context, Action, Result).
+- If the Professional Summary changed, include:
+  - `target_role_phrase`
+  - `jd_keywords_used`
+  - `proof_point_used`
+  - `proof_source`
 - If a full replacement occurred, include:
   - `replacement_reason`
   - `original_bullet`

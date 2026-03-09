@@ -1,0 +1,34 @@
+Use AGENTS.md and run the full workflow for this job description.
+
+0) Research company context and write the company research report.
+1) Tailor the resume.
+2) Validate the tailored resume.
+3) Write the cover letter using inputs/personal_profile.md.
+
+Use these sources and constraints:
+- Use inputs/project_specs/*.md as the claim-evidence source for projects.
+- Use inputs/section_rules/*.md as section-specific writing constraints.
+- Never modify Obaida_Kandakji.tex.
+- Save resume outputs under tailored_resumes/<Company>/.
+- Save the cover letter under cover_letters/text/.
+- Keep exactly 4 active projects.
+- Keep bullet counts unchanged.
+- Keep section order unchanged.
+- Do not use em dashes.
+- The Professional Summary must follow inputs/section_rules/professional_summary.md.
+- Do not fabricate tools, experience, outcomes, or company facts.
+- Use company research to improve positioning, but do not inject unsupported company claims into resume bullets.
+
+At the end, provide:
+- Paths to all generated files
+- Keywords added and skipped
+- Validation pass/fail result
+- Summary audit:
+  - target-role phrase used
+  - JD keywords used in summary
+  - proof point used in summary
+
+If no job description is pasted below, use the latest .txt file in job_descriptions/.
+
+Job description:
+[PASTE JOB DESCRIPTION HERE]
