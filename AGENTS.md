@@ -35,6 +35,10 @@ These instructions define a 3-stage pipeline for Codex in this repository.
 Goal: minor, truthful keyword alignment edits for ATS.
 
 Rules:
+- Persona and quality bar:
+  - Act like a senior recruiter screening 200 resumes per day.
+  - Prioritize fast clarity, relevance, and concrete impact over buzzwords.
+  - Keep bullets specific and scannable in one quick pass.
 - Never modify `Obaida_Kandakji.tex`.
 - Edit only these sections:
   - Professional Summary
@@ -50,6 +54,13 @@ Rules:
   - Prefer micro-edits (keyword substitutions, phrase tightening, small reorder).
   - Do not fully rewrite a bullet unless required for factual correction.
   - Target high text retention for edited bullets (roughly 70%+ original wording when feasible).
+- Recruiter-style writing constraints:
+  - Avoid dense jargon stacking and acronym-heavy phrasing when simpler wording is available.
+  - Avoid generic filler language (for example: "responsible for", "worked on", "helped with").
+  - Prefer measurable achievements and concrete scope signals:
+    - metrics when available (%, counts, latency, throughput, etc.)
+    - otherwise concrete implementation scope (number of services, components, users, workflows, systems).
+  - Keep each bullet focused on one clear value statement, not broad hype.
 - Bullet-bank usage rule:
   - Bullet Bank entries in project specs are reference material, not default replacements.
   - Try micro-edits first.
@@ -107,6 +118,10 @@ Checks:
 - Verify section order and bullet counts remain unchanged.
 - Verify edited project bullets still follow Google XYZ shape (problem/context + action + result).
 - Verify edited bullets were minimally changed rather than fully rewritten, unless explicitly justified.
+- Verify recruiter-readability quality:
+  - Bullets remain specific and non-generic.
+  - Edited bullets include measurable or concrete scope detail when available from source/spec evidence.
+  - No unnecessary jargon-heavy rewrites.
 - If any full bullet replacement occurred:
   - Confirm written justification exists in tailor report.
   - Confirm replacement maps to an approved Bullet Bank entry from the corresponding project spec.

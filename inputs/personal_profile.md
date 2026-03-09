@@ -2,25 +2,41 @@
 
 ## Who I Am
 
-Write 3-5 lines about your background and professional identity.
+I am a Computer Engineering graduate from the University of Ottawa.
+I am deeply interested in technology and practical problem-solving.
+I have built custom gaming and work PCs for people for about 10 years and developed strong hands-on hardware and IT troubleshooting skills.
+I am especially motivated by aerospace, aviation, and space technology domains.
 
 ## Why I Am Interested In This Field
 
-Write 2-4 lines about motivation.
+I enjoy turning technical curiosity into useful systems and tools.
+I like understanding how complex systems work end-to-end, from components and infrastructure to user-facing outcomes.
+I am highly motivated by engineering work connected to aviation, aerospace, and advanced technology.
 
 ## Work Style
 
-List practical strengths (for example: collaboration, ownership, learning speed).
+- Hands-on and detail-oriented
+- Fast learner with strong technical curiosity
+- Comfortable diagnosing and fixing technical issues
+- Practical builder mindset focused on real outcomes
 
 ## Interests
 
-List interests you are comfortable mentioning in a cover letter.
+- Aviation and aircraft
+- Space technology and aerospace
+- Custom computer building and IT hardware
+- Chess
+- Badminton
+- Swimming
+- Skiing
 
 ## Top Personal Details To Use (Pick 1-2)
 
-Add 1-2 details that you most want referenced in cover letters.
-Only these should be preferred unless the user explicitly asks otherwise.
+1. I have built custom gaming and work PCs for about 10 years and know computer hardware deeply.
+2. I am highly interested in aviation and aerospace technology.
 
 ## Constraints For Cover Letters
 
-List anything to avoid (tone, topics, wording, length, etc.).
+- Use at most 1-2 personal details from this profile.
+- Keep tone natural and specific, not generic or over-polished.
+- Do not include unrelated hobbies unless they clearly add value to role fit.

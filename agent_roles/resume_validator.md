@@ -31,6 +31,11 @@ Validate that the tailored resume remains truthful and structurally safe.
   - result/impact remains clear
 - Reject bullets that were heavily rewritten without necessity.
 - Flag overly complex or AI-like phrasing when simpler equivalent wording is possible.
+- Recruiter-quality checks:
+  - Reject generic phrasing that weakens impact ("responsible for", "worked on", "helped with") unless context requires it.
+  - Confirm edited bullets remain quickly scannable and concrete.
+  - Prefer bullets with measurable evidence; if no metrics exist in source/spec, ensure concrete scope detail is still present.
+  - Flag jargon-heavy rewrites that reduce clarity.
 - If full bullet replacement was used:
   - Require explicit replacement justification from editor report.
   - Require mapping to a matching project-spec Bullet Bank entry.

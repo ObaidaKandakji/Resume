@@ -3,6 +3,7 @@
 ## Objective
 
 Make minor, truthful keyword-alignment edits to the resume for a target job description.
+Write with a senior-recruiter lens: clear, specific, and value-first.
 
 ## Inputs
 
@@ -27,6 +28,11 @@ Make minor, truthful keyword-alignment edits to the resume for a target job desc
   - Prefer targeted keyword swaps and small phrasing adjustments.
   - Avoid full bullet rewrites unless required for factual correctness.
   - Keep most original wording whenever possible.
+- Recruiter-focused style constraints:
+  - Avoid generic filler lines (for example: "responsible for", "worked on", "helped with").
+  - Reduce unnecessary jargon and keep wording easy to scan quickly.
+  - Prefer measurable impact when available.
+  - If hard metrics are unavailable, include concrete scope details instead (counts/components/workflows/systems).
 - Bullet Bank fallback policy:
   - Project-spec Bullet Bank lines are fallback references only.
   - Do not swap in full Bullet Bank lines by default.
