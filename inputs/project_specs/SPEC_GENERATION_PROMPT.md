@@ -7,6 +7,11 @@ Analyze this repository and generate a project spec using the exact structure fr
 Rules:
 - Only include claims supported by repository code/docs.
 - Mark uncertain metrics as UNVERIFIED.
+- Prefer exact scope counts over guessed impact percentages.
+- Include a `Quantification Candidates` section with:
+  - measured outcomes
+  - exact scope counts
+  - derived estimates with simple math and source
 - Add a strict "Do Not Claim" section.
 - Provide 4-8 truthful ATS-friendly bullet variants.
 

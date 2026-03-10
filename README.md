@@ -26,6 +26,7 @@ Project context policy:
 - Optional TCP swap candidate starter: `inputs/project_specs/tcp_networking_optional.md`.
 - Section-specific writing guides live in `inputs/section_rules/`.
 - The Professional Summary uses `inputs/section_rules/professional_summary.md` for length, proof, keyword, and anti-generic rules.
+- Resume bullets use `inputs/section_rules/quantification.md` to prefer real metrics and verified scope counts over guessed percentages.
 
 ## No-API Agent Mode (Recommended)
 

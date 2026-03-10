@@ -46,6 +46,11 @@ Python, OpenCV, SQL, Kalman filter, web dashboard components.
 - 30% improvement in form validation accuracy (as documented in resume).
 - 40% reduction in signal noise (as documented in resume).
 
+## Quantification Candidates
+
+- User-confirmed estimate: `~13%` reduction in time needed for users to correct form
+  - Basis: immediate posture feedback helped users adjust sooner within a workout set.
+
 ## Best-Fit Job Signals
 
 Computer vision, data processing, Python engineering, applied ML features, analytics.

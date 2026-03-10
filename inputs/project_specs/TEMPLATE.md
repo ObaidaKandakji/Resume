@@ -38,6 +38,27 @@ List terms/claims that should not be used for this project.
 Only include measured or defensible outcomes.
 If uncertain, mark as `UNVERIFIED`.
 
+## Quantification Candidates
+
+List numbers the agent can safely use in bullets.
+
+Split them into:
+
+- measured outcomes
+- exact scope counts
+- derived estimates with simple math and source
+
+If a number is approximate, say so clearly.
+If it cannot be defended in an interview, do not include it.
+
+## Potential Metrics To Verify (Optional, Do Not Use Yet)
+
+Use this section for hypothesis-style estimates you may want to confirm later.
+
+- These are brainstorming notes only.
+- They must not be used in resume bullets, summaries, or cover letters until the user confirms them.
+- Add a short rationale for why the estimate may be reasonable and what would need to be verified.
+
 ## Best-Fit Job Signals
 
 List the job themes this project is strongest for (for example: distributed systems, networking, async processing, computer vision).

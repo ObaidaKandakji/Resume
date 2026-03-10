@@ -12,6 +12,7 @@ Write with a senior-recruiter lens: clear, specific, and value-first.
 - `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
 - Relevant files in `inputs/project_specs/*.md`
 - `inputs/section_rules/professional_summary.md`
+- `inputs/section_rules/quantification.md`
 
 ## Hard Limits
 
@@ -45,6 +46,19 @@ Write with a senior-recruiter lens: clear, specific, and value-first.
   - Reduce unnecessary jargon and keep wording easy to scan quickly.
   - Prefer measurable impact when available.
   - If hard metrics are unavailable, include concrete scope details instead (counts/components/workflows/systems).
+- Quantification rule:
+  - Read `inputs/section_rules/quantification.md` before editing bullets.
+  - Keep valid source metrics already present.
+  - Approved `Quantification Candidates` may be used in the actual resume when they strengthen the bullet naturally.
+  - Prefer verified scope counts when measured outcomes are unavailable.
+  - Use derived estimates only when the project spec documents the math and the wording stays approximate.
+  - Never add invented percentages for efficiency, productivity, speed, revenue, or time savings.
+  - Do not use hypothesis-only sections such as `Potential Metrics To Verify` unless the user has explicitly confirmed those numbers.
+  - Keep quantified bullets concise:
+    - usually one strong number per bullet
+    - plain verbs such as `reduced`, `improved`, `cut`, `sped up`, or `automated`
+    - no bloated explanation around the metric
+  - If the number makes the bullet sound generic or AI-written, do not force it in.
 - Bullet Bank fallback policy:
   - Project-spec Bullet Bank lines are fallback references only.
   - Do not swap in full Bullet Bank lines by default.

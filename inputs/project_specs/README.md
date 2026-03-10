@@ -15,3 +15,4 @@ How to use:
 Agent behavior:
 - Resume Tailor and Cover Letter Writer should only use project claims that are supported by these specs or current resume text.
 - Validator should fail output if unsupported project keywords are introduced.
+- If a spec includes `Potential Metrics To Verify`, treat that section as brainstorming only until the user confirms the numbers.

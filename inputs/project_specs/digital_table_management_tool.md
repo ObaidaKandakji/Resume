@@ -44,6 +44,13 @@ Java, XML, Android Studio.
 - Qualitative improvement in seating speed and staff coordination.
 - No quantified metric should be claimed unless later verified.
 
+## Quantification Candidates
+
+- User-confirmed estimate: `~93%` reduction in coordination mistakes such as duplicate section seating
+  - Basis: the centralized workflow tool replaced verbal handoffs that caused repeated or conflicting seating assignments.
+- User-confirmed estimate: `~8%` improvement in seating throughput during rush periods
+  - Basis: faster table-status visibility reduced idle time between table readiness and guest seating.
+
 ## Best-Fit Job Signals
 
 Mobile development, workflow tooling, operational software, user-facing process optimization.

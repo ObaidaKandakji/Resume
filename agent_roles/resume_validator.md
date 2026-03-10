@@ -12,6 +12,7 @@ Validate that the tailored resume remains truthful and structurally safe.
 - `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
 - Relevant files in `inputs/project_specs/*.md`
 - `inputs/section_rules/professional_summary.md`
+- `inputs/section_rules/quantification.md`
 
 ## Validation Checks
 
@@ -34,6 +35,13 @@ Validate that the tailored resume remains truthful and structurally safe.
   - 1 concrete proof point included
   - no unsupported tools or claims
 - Every edited project claim is backed by source resume text or project spec evidence.
+- Quantification must satisfy `inputs/section_rules/quantification.md`:
+  - any percentage or numeric improvement claim is source-backed
+  - any derived estimate is traceable to simple documented math
+  - approximate numbers are labeled as approximate when needed
+  - scope counts are preferred over invented impact metrics
+  - hypothesis-only sections such as `Potential Metrics To Verify` were not used unless explicitly user-confirmed
+  - quantified bullets stay concise, natural, and not overloaded with metrics
 - Section order unchanged.
 - Bullet counts unchanged per project/experience entry.
 - Changes are minor and keyword-focused.

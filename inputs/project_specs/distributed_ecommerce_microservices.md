@@ -73,6 +73,11 @@ Supports asynchronous order processing architecture via RabbitMQ-backed service 
 - Runtime performance metrics (latency/throughput/error rate): UNVERIFIED.
 - Production deployment frequency and success rate: UNVERIFIED.
 
+## Quantification Candidates
+
+- User-confirmed estimate: `~90%` reduction in manual deployment effort per release
+  - Basis: CI/CD replaced repeated manual build, push, and rollout steps across 5 services.
+
 ## Best-Fit Job Signals
 
 - Kubernetes platform engineering

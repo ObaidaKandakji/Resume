@@ -21,6 +21,7 @@ These instructions define a 4-stage pipeline for Codex in this repository.
 - Section-specific writing guides:
   - `inputs/section_rules/*.md`
   - `inputs/section_rules/professional_summary.md` is the primary quality guide for the Professional Summary.
+  - `inputs/section_rules/quantification.md` defines how to use metrics and scope counts without inventing impact.
 - Optional project-candidate blocks in source comments:
   - Recommended marker format:
     - `% OPTIONAL_PROJECT_START: TCP_Networking`
@@ -112,6 +113,19 @@ Rules:
     - metrics when available (%, counts, latency, throughput, etc.)
     - otherwise concrete implementation scope (number of services, components, users, workflows, systems).
   - Keep each bullet focused on one clear value statement, not broad hype.
+- Quantification rule:
+  - Read `inputs/section_rules/quantification.md` before editing bullets.
+  - Preserve valid existing metrics already present in the source resume.
+  - Approved `Quantification Candidates` may be used in the actual resume when they improve clarity and fit.
+  - If no measured impact metric exists, prefer verified scope counts over invented percentages.
+  - Derived estimates are allowed only when the project spec documents the math and the wording stays approximate.
+  - Never invent performance, efficiency, productivity, revenue, latency, or time-saved percentages.
+  - Ignore any project-spec section labeled as hypothesis-only material such as `Potential Metrics To Verify` unless the user has explicitly confirmed those numbers.
+  - Use numbers in short, natural phrasing:
+    - one strong number per bullet when feasible
+    - plain verbs such as `reduced`, `improved`, `cut`, `sped up`, or `automated`
+    - avoid metric stuffing or long AI-polished clauses
+  - If the quantified version sounds awkward or generic, skip the number and keep the bullet cleaner.
 - Bullet-bank usage rule:
   - Bullet Bank entries in project specs are reference material, not default replacements.
   - Try micro-edits first.
@@ -192,6 +206,12 @@ Checks:
   - Bullets remain specific and non-generic.
   - Edited bullets include measurable or concrete scope detail when available from source/spec evidence.
   - No unnecessary jargon-heavy rewrites.
+- Verify quantification safety:
+  - Any percentage or numeric improvement claim is supported by the source resume or project spec.
+  - Any derived estimate is traceable to documented math in the project spec and presented as approximate when needed.
+  - Scope counts are preferred over invented impact metrics when measured outcomes do not exist.
+  - Hypothesis-only sections such as `Potential Metrics To Verify` were not used unless explicitly user-confirmed.
+  - Quantified bullets remain concise, human-sounding, and not overloaded with numbers.
 - If any full bullet replacement occurred:
   - Confirm written justification exists in tailor report.
   - Confirm replacement maps to an approved Bullet Bank entry from the corresponding project spec.

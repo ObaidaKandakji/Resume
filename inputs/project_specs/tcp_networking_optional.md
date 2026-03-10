@@ -65,6 +65,13 @@ The project centralizes simulated ice/weather telemetry, processes it continuous
 - Expected ~30 readings per 5-minute window when telemetry is emitted every 10 seconds: `UNVERIFIED` (`README.md`).
 - "Near real-time" responsiveness and "very fast" queries are described qualitatively, but not benchmarked: `UNVERIFIED` (`README.md`).
 
+## Quantification Candidates
+
+- User-confirmed estimate: `~97%` faster monitoring refresh time versus periodic manual review
+  - Basis: automated 5-minute windows surface status changes far more frequently than slower manual review cycles.
+- User-confirmed estimate: `~27%` reduction in downstream data-handling effort
+  - Basis: one analytics job writes both operational and historical outputs without separate export paths.
+
 ## Best-Fit Job Signals
 
 - IoT and telemetry data pipelines

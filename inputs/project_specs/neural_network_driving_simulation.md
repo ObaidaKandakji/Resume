@@ -65,6 +65,13 @@ Combines sensing, control, scoring, and visualization to make neural-network-dri
 - Quantified improvement across generations (for example pass-rate gain over time): `UNVERIFIED`.
 - Runtime/FPS benchmarks across devices: `UNVERIFIED`.
 
+## Quantification Candidates
+
+- User-confirmed estimate: `100x` increase in experiment throughput versus testing one car at a time
+  - Basis: the simulation evaluates 100 AI cars in a generation instead of a single-car run.
+- User-confirmed estimate: `~23%` reduction in debugging or tuning time after adding live visualization and saved-brain workflow
+  - Basis: visualization and persistence made behavior easier to inspect across runs.
+
 ## Best-Fit Job Signals
 
 - Browser-based simulation engineering

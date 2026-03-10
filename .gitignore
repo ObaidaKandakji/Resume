@@ -29,3 +29,6 @@ cover_letters/pdf/
 *.pfx
 *.crt
 *.cer
+
+# Local editor settings
+.vscode/settings.json
