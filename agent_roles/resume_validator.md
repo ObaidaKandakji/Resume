@@ -7,9 +7,9 @@ Validate that the tailored resume remains truthful and structurally safe.
 ## Inputs
 
 - `Obaida_Kandakji.tex` (source)
-- `tailored_resumes/<Company>/Obaida_Kandakji_<Company>.tex` (candidate)
+- `tailored_resumes/<Target>/Obaida_Kandakji_<Target>.tex` (candidate)
 - Job description text
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.company_research.md`
 - Relevant files in `inputs/project_specs/*.md`
 - `inputs/section_rules/professional_summary.md`
 - `inputs/section_rules/quantification.md`
@@ -17,7 +17,7 @@ Validate that the tailored resume remains truthful and structurally safe.
 ## Validation Checks
 
 - Run deterministic lint first:
-  - `python scripts/nonnegotiable_lint.py --source Obaida_Kandakji.tex --candidate tailored_resumes/<Company>/Obaida_Kandakji_<Company>.tex --report tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
+  - `python scripts/nonnegotiable_lint.py --source Obaida_Kandakji.tex --candidate tailored_resumes/<Target>/Obaida_Kandakji_<Target>.tex --report tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.nonnegotiable_lint.md`
 - Non-negotiable lint must pass for:
   - 4 active projects
   - bullet counts unchanged
@@ -62,9 +62,10 @@ Validate that the tailored resume remains truthful and structurally safe.
   - Require explicit `replacement_approved: YES` in validation report, else fail.
 - Active projects count remains exactly 4.
 - If a project swap happened, confirm it is exactly one-in/one-out and no fabricated details were introduced.
+- Confirm `Neural Network Driving Simulation` remains active unless the user explicitly asked to remove it.
 
 ## Output
 
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.validation_report.md`
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.validation_report.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.nonnegotiable_lint.md`
 - Must contain final status: `PASS` or `FAIL`.

@@ -9,7 +9,7 @@ Write with a senior-recruiter lens: clear, specific, and value-first.
 
 - `Obaida_Kandakji.tex`
 - Job description text
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.company_research.md`
 - Relevant files in `inputs/project_specs/*.md`
 - `inputs/section_rules/professional_summary.md`
 - `inputs/section_rules/quantification.md`
@@ -69,12 +69,15 @@ Write with a senior-recruiter lens: clear, specific, and value-first.
   - Prefer candidates that use `% OPTIONAL_PROJECT_START:<Name>` and `% OPTIONAL_PROJECT_END:<Name>` markers.
   - If candidate boundaries are unclear, do not attempt swap.
   - If you uncomment one project, comment out exactly one active project.
+  - Keep `Neural Network Driving Simulation` active by default because it is a distinctive, high-signal project for recruiter interest.
+  - Only remove `Neural Network Driving Simulation` if the user explicitly asks.
+  - When choosing a project to deactivate, choose from the other active projects first.
   - Document the swap decision and keyword rationale in the report.
 
 ## Output
 
-- `tailored_resumes/<Company>/Obaida_Kandakji_<Company>.tex`
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.tailor_report.md`
+- `tailored_resumes/<Target>/Obaida_Kandakji_<Target>.tex`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.tailor_report.md`
 
 Report requirement:
 - For each edited bullet, include a brief XYZ mapping (Problem/Context, Action, Result).

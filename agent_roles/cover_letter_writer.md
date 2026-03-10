@@ -8,7 +8,7 @@ Write a role-specific cover letter using validated resume content plus personal 
 
 - Validated tailored resume
 - Job description text
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.company_research.md`
 - `inputs/personal_profile.md` (if present)
 - `inputs/section_rules/cover_letter.md`
 - Relevant files in `inputs/project_specs/*.md`
@@ -47,4 +47,4 @@ Write a role-specific cover letter using validated resume content plus personal 
 
 ## Output
 
-- `cover_letters/text/Obaida_Kandakji_<Company>.cover_letter.md`
+- `cover_letters/text/Obaida_Kandakji_<Target>.cover_letter.md`

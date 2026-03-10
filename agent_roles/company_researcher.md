@@ -8,6 +8,10 @@ Research the target company and produce role-relevant context for resume tailori
 
 - Job description text
 - Company name (or infer from job posting)
+- Most specific target identifier for naming:
+  - subdivision, department, branch, bureau, or team if available
+  - otherwise company name
+  - otherwise role title
 - Optional company URL provided by user
 
 ## Research Priorities
@@ -30,7 +34,7 @@ Research the target company and produce role-relevant context for resume tailori
 
 ## Output
 
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.company_research.md`
 
 ## Required Sections
 

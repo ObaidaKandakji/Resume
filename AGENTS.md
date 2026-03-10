@@ -30,12 +30,19 @@ These instructions define a 4-stage pipeline for Codex in this repository.
 
 ## Naming
 
-- `Company` token must be letters/numbers/underscore only.
-- If unknown, use job file stem or `UnknownCompany`.
+- `Target` token must be letters/numbers/underscore only.
+- Derive `Target` from the most specific identifier in the posting:
+  - subdivision, department, branch, bureau, or team name first
+  - otherwise specific company name
+  - otherwise role title
+- If the top-level employer is too generic (for example `Government_of_Canada`), do not use it by itself when a more specific subdivision is available.
+- If subdivision alone is still ambiguous, combine subdivision + role:
+  - example: `Employment_and_Social_Development_Canada_Software_Developer`
+- If unknown, use normalized role title, then job file stem, then `UnknownTarget`.
 - Base prefix is always `Obaida_Kandakji`.
-- Per-company output directory:
-  - `tailored_resumes/<Company>/`
-  - Create this folder (and `tailored_resumes/<Company>/reports/`) before writing outputs.
+- Per-target output directory:
+  - `tailored_resumes/<Target>/`
+  - Create this folder (and `tailored_resumes/<Target>/reports/`) before writing outputs.
 
 ## Stage 0: Company Research
 
@@ -59,7 +66,7 @@ Source rules:
 - Include source links in the `Sources` section for each major company claim used downstream.
 
 Output:
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.company_research.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.company_research.md`
 
 Required sections in research output:
 - `Company Snapshot`
@@ -147,6 +154,10 @@ Rules:
 - Do not add company-specific factual claims into resume bullets unless directly relevant and fully verified.
 - One-page constraint is mandatory.
 - Active projects target is exactly 4.
+- Protected project rule:
+  - `Neural Network Driving Simulation` is protected by default because it adds distinctive recruiter signal and portfolio uniqueness.
+  - Do not deactivate, swap out, or remove this project unless the user explicitly asks.
+  - If an optional project is activated, choose the project to deactivate from the other active projects first.
 - Project swap rule (for commented candidate projects):
   - If a commented-out project in the source clearly matches the job better (for example TCP/networking keywords), you may activate it.
   - If you activate one commented project, you must deactivate exactly one currently active project.
@@ -163,8 +174,8 @@ Rules:
       - `Result: ...`
 
 Output:
-- `tailored_resumes/<Company>/Obaida_Kandakji_<Company>.tex`
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.tailor_report.md`
+- `tailored_resumes/<Target>/Obaida_Kandakji_<Target>.tex`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.tailor_report.md`
 
 Tailor report requirement:
 - If the Professional Summary changed, include:
@@ -179,7 +190,7 @@ Goal: verify Stage 1 output is truthful and structurally safe.
 
 Deterministic gate (run first):
 - Run:
-  - `python scripts/nonnegotiable_lint.py --source Obaida_Kandakji.tex --candidate tailored_resumes/<Company>/Obaida_Kandakji_<Company>.tex --report tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
+  - `python scripts/nonnegotiable_lint.py --source Obaida_Kandakji.tex --candidate tailored_resumes/<Target>/Obaida_Kandakji_<Target>.tex --report tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.nonnegotiable_lint.md`
 - This hard-checks non-negotiables only:
   - 4 active projects
   - bullet counts unchanged
@@ -222,10 +233,11 @@ Checks:
 - Verify swap integrity when a commented project was activated:
   - Exactly one project in and one project out.
   - No fabricated project details introduced during swap.
+  - `Neural Network Driving Simulation` remained active unless the user explicitly overrode that rule.
 
 Output:
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.validation_report.md`
-- `tailored_resumes/<Company>/reports/Obaida_Kandakji_<Company>.nonnegotiable_lint.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.validation_report.md`
+- `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.nonnegotiable_lint.md`
 
 If validation fails:
 - Revise tailored file once.
@@ -266,7 +278,7 @@ Rules:
   - The voice sounds like an enthusiastic early-career applicant.
 
 Primary output:
-- `cover_letters/text/Obaida_Kandakji_<Company>.cover_letter.md`
+- `cover_letters/text/Obaida_Kandakji_<Target>.cover_letter.md`
 
 ## Required Final Summary
 
