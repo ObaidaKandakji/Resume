@@ -15,6 +15,8 @@ These instructions define a 4-stage pipeline for Codex in this repository.
   - Use latest `.txt` in `job_descriptions/`
 - Personal background (for cover letter):
   - `inputs/personal_profile.md` if present, plus any extra user notes in chat
+- Cover letter drafting backbone:
+  - `coverletteroutline.md`
 - Project evidence specs:
   - `inputs/project_specs/*.md`
   - Treat these as the primary source of project-level claim validity.
@@ -248,13 +250,34 @@ If validation fails:
 Goal: produce a tailored cover letter using validated resume + personal profile.
 
 Rules:
+- Read `coverletteroutline.md` first and use it as the drafting backbone.
 - Read `inputs/section_rules/cover_letter.md` before drafting.
 - Use only claims supported by source/tailored resume and user profile.
 - Use company research output to tailor positioning, motivation framing, and company-specific language.
 - Use project spec cards to choose the strongest relevant project evidence.
-- Prioritize 2-3 most relevant projects/skills for the target role.
+- Prioritize 1-2 primary projects for the target role, with a second proof point only when it improves fit.
 - Keep concise, professional, specific to company/job, and clearly early-career in voice.
 - Write an actual letter with greeting, body paragraphs, and sign-off.
+- Follow the outline-backed structure:
+  - Introduction:
+    - 2-3 sentences
+    - role title
+    - company name
+    - one company-specific reason for interest
+    - one candidate-specific hook
+    - brief professional identity
+  - Technical proof paragraph:
+    - strongest project evidence
+    - concrete metric, scope, or implementation detail
+    - direct link to role needs
+  - Company fit paragraph:
+    - why this company specifically
+    - one teamwork, working-style, or supporting proof signal
+    - at most 1 relevant personal detail if it strengthens fit
+  - Conclusion:
+    - brief reaffirmation of fit
+    - plain thank-you sentence
+    - sign-off
 - Human-sounding writing only:
   - Never use em dashes (`—`).
   - Avoid AI-generic phrasing (for example: "I am excited to apply", "I am writing to express", "passionate about leveraging", "fast-paced environment", "team player").
@@ -272,6 +295,7 @@ Rules:
   - No unsupported claims.
   - No more than 2 personal details included.
   - Any company-specific statement is supported by the research report.
+  - Paragraph structure matches `coverletteroutline.md`.
   - Greeting and sign-off are present.
   - At least 1 company-specific sentence is present.
   - At least 1 candidate-specific sentence is present.

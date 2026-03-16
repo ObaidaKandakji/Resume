@@ -42,7 +42,7 @@ Use AGENTS.md and run all 4 stages for this job description.
 0) Research company context and write company research report.
 1) Tailor resume.
 2) Validate tailored resume.
-3) Write cover letter using inputs/personal_profile.md.
+3) Write cover letter using coverletteroutline.md and inputs/personal_profile.md.
 Use inputs/project_specs/*.md as claim-evidence source for projects.
 Use inputs/section_rules/*.md as section-specific writing constraints.
 Save all outputs with the correct target token.
@@ -54,6 +54,7 @@ If needed for uniqueness, combine subdivision + role.
 
 - Job descriptions: `job_descriptions/*.txt` or paste in chat
 - Personal profile for cover letters: `inputs/personal_profile.md`
+- Cover letter drafting backbone: `coverletteroutline.md`
 - Project specs for claim validation: `inputs/project_specs/*.md`
 - Section rules for targeted writing constraints: `inputs/section_rules/*.md`
 

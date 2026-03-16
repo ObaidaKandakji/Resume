@@ -11,6 +11,19 @@ The letter should make a hiring manager quickly understand:
 
 It should sound like a real early-career applicant making a case, not a model assembling polished sentences or a polished essay.
 
+## Primary Backbone
+
+Use `coverletteroutline.md` as the structural backbone for every draft.
+This file is the quality-control layer on top of that outline.
+
+That means the writer should:
+
+- keep the same high-level flow as the outline
+- use the outline's paragraph purpose to decide what belongs where
+- still obey the anti-generic, anti-AI, and evidence rules in this file
+
+If the outline and a loose drafting instinct conflict, follow the outline.
+
 ## Research Basis
 
 This rule set is based on recurring guidance from major university career centers and hiring-focused resources:
@@ -56,7 +69,8 @@ These are the changes most likely to improve response quality:
 
 ## Required Structure
 
-Use this structure unless the user asks for a different format.
+Use the following structure unless the user asks for a different format.
+This is the operational version of `coverletteroutline.md`.
 
 ### Greeting
 
@@ -64,7 +78,7 @@ Use this structure unless the user asks for a different format.
 - Otherwise use `Dear Hiring Team,`
 - Do not use `To whom it may concern`.
 
-### Paragraph 1: Targeted Opening
+### Paragraph 1: Introduction
 
 Must include all of the following:
 
@@ -72,53 +86,70 @@ Must include all of the following:
 - role title
 - one company-specific reason for interest
 - one truthful candidate-specific angle
+- brief professional identity such as recent Computer Engineering graduate
 
 What this paragraph must do:
 
 - establish fit immediately
 - sound intentional, not mass-applied
+- stay to 2-3 sentences
+- give the reader a reason to keep reading
 
 What this paragraph must not do:
 
 - open with generic excitement
 - summarize the entire resume
 - repeat soft traits without proof
+- drift into philosophy, technology commentary, or broad statements about innovation
 
-### Paragraph 2: Strongest Proof
+### Paragraph 2: Technical Skills and Project Proof
 
-Use the single best project or experience example.
+Use the strongest 1-2 relevant project examples, but keep the paragraph focused.
 
 Must include:
 
-- named project or experience
+- at least 1 named project
 - concrete scope, metric, or implementation detail
+- the problem, what was built or improved, and the result
 - explicit connection to one or two role needs
+- technologies only when they help prove fit
 
 This paragraph should carry the main persuasive load.
+It should feel like proof, not a tool list.
 
-### Paragraph 3: Second Proof and Working Style
+### Paragraph 3: Company Fit and Working Style
 
 Use one of:
 
 - a second relevant project
 - a supporting experience signal
-- a complementary strength such as troubleshooting, communication, or operator-facing design
+- a complementary strength such as troubleshooting, communication, teamwork, or operator-facing design
 
 Must still stay evidence-based.
 If using a personal detail, tie it directly to company or role fit.
 
-### Closing
+This paragraph must also:
 
+- explain why this company specifically, using company research
+- include at least 1 company-specific fact, product, mission, or domain cue
+- show how the applicant would contribute to the team, not only what they hope to gain
+- keep soft skills grounded in a real example or real working style signal
+
+### Paragraph 4: Conclusion
+
+- Reaffirm fit and interest briefly.
 - End with a short forward-looking sentence about contributing to the team.
+- Thank the reader for their time in one plain sentence.
 - Add a proper sign-off:
   - `Sincerely,`
   - `Obaida Kandakji`
 
 Do not end on a vague thank-you paragraph with no substance.
+Keep the conclusion brief.
 
 ## Evidence Selection Rules
 
-- Use at most 2 projects as primary proof unless the role strongly requires a third.
+- Use at most 2 projects as primary proof.
 - Use at most 1-2 personal details from `inputs/personal_profile.md`.
 - Prefer one strong personal detail over two weaker ones.
 - Pull claims only from:
@@ -129,6 +160,7 @@ Do not end on a vague thank-you paragraph with no substance.
   - personal profile
   - explicit user notes in chat
 - If a claim is not supported, omit it.
+- Prefer named projects, metrics, scope counts, or concrete implementation details over broad summaries.
 
 ## Anti-Generic Rules
 
@@ -151,6 +183,8 @@ Also avoid:
 - repeating the resume bullet-by-bullet
 - stacked buzzword phrases
 - polished but interchangeable language that could fit any applicant
+- resume bullets pasted into prose with no synthesis
+- trying to mention too many projects in one letter
 
 Ban these tone failures too:
 
@@ -172,6 +206,7 @@ The letter should fail review if any of these are true:
 - It sounds cleaner than a real person would write, but less specific.
 - It sounds too polished, literary, or philosophical for an early-career applicant.
 - It sounds older, more senior, or more authoritative than the resume supports.
+- It ignores the paragraph roles from `coverletteroutline.md`.
 
 ## Style Rules
 
@@ -190,6 +225,9 @@ The letter should fail review if any of these are true:
 - Keep paragraphs short and skimmable.
 - Use plain English unless the role truly requires more technical wording.
 - Mirror the job posting's tone without copying it.
+- Show enthusiasm through specifics, not generic excitement phrases.
+- Do not over-explain obvious points the reader can already infer from the resume.
+- Do not write like a professor, essayist, consultant, or Nobel lecture.
 
 ## Output Format
 
@@ -198,11 +236,13 @@ Default markdown output:
 ```md
 Dear Hiring Team,
 
-[Paragraph 1]
+[Introduction]
 
-[Paragraph 2]
+[Technical proof paragraph]
 
-[Paragraph 3]
+[Company fit paragraph]
+
+[Conclusion]
 
 Sincerely,
 Obaida Kandakji
@@ -219,6 +259,7 @@ Before saving, confirm all of the following:
 - Sign-off present
 - Company name present
 - Role title present
+- Professional identity present in the introduction
 - At least 1 company-specific sentence from research
 - At least 1 candidate-specific sentence from profile, experience, or user notes
 - At least 2 concrete proof anchors:
@@ -227,6 +268,8 @@ Before saving, confirm all of the following:
   - named project
   - named tool
   - real operational context
+- Introduction is 2-3 sentences
+- Body contains a technical proof paragraph and a company-fit paragraph
 - No unsupported claims
 - No em dashes
 - No banned generic opener
@@ -241,8 +284,9 @@ Score each draft from 0-5:
 - Specificity to applicant
 - Strength of evidence
 - Clarity and brevity
+- Structural discipline against `coverletteroutline.md`
 
-Minimum acceptable total: `16/20`
+Minimum acceptable total: `20/25`
 
 ## Sources
 

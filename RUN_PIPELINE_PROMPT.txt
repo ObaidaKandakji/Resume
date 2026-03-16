@@ -3,11 +3,12 @@ Use AGENTS.md and run the full workflow for this job description.
 0) Research company context and write the company research report.
 1) Tailor the resume.
 2) Validate the tailored resume.
-3) Write the cover letter using inputs/personal_profile.md.
+3) Write the cover letter using coverletteroutline.md and inputs/personal_profile.md.
 
 Use these sources and constraints:
 - Use inputs/project_specs/*.md as the claim-evidence source for projects.
 - Use inputs/section_rules/*.md as section-specific writing constraints.
+- Use coverletteroutline.md as the structural backbone for the cover letter.
 - Never modify Obaida_Kandakji.tex.
 - Save resume outputs under tailored_resumes/<Target>/.
 - Save the cover letter under cover_letters/text/.

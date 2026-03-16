@@ -10,19 +10,26 @@ Write a role-specific cover letter using validated resume content plus personal 
 - Job description text
 - `tailored_resumes/<Target>/reports/Obaida_Kandakji_<Target>.company_research.md`
 - `inputs/personal_profile.md` (if present)
+- `coverletteroutline.md`
 - `inputs/section_rules/cover_letter.md`
 - Relevant files in `inputs/project_specs/*.md`
 - Extra user notes from chat
 
 ## Rules
 
+- Read `coverletteroutline.md` first and use it as the drafting backbone.
 - Read `inputs/section_rules/cover_letter.md` before drafting.
 - Use only supported claims from resume/profile.
 - Use company research to align messaging with mission, product context, and role priorities.
 - Use project specs to pick evidence-rich project examples.
-- Emphasize 2-3 most relevant projects/skills.
+- Emphasize 1-2 primary projects, with a second proof point only when it improves fit.
 - Keep tone concise, professional, role-specific, and clearly early-career.
 - Write an actual letter with greeting, body paragraphs, and sign-off.
+- Follow this paragraph plan:
+  - Introduction: 2-3 sentences with role, company, company-specific reason, and candidate-specific hook.
+  - Technical proof paragraph: strongest project evidence tied to role needs.
+  - Company fit paragraph: why this company plus teamwork or working-style signal.
+  - Conclusion: short reaffirmation, thanks, and sign-off.
 - Humanize writing style:
   - Never use em dashes (`—`).
   - Avoid AI-template openings and filler phrases.
@@ -40,6 +47,7 @@ Write a role-specific cover letter using validated resume content plus personal 
   - Personal details used <= 2.
   - No claim appears that is missing from resume/profile evidence.
   - Company-specific statements are supported by company research file.
+  - The paragraph structure matches `coverletteroutline.md`.
   - Greeting and sign-off are present.
   - At least 1 company-specific sentence is present.
   - At least 1 candidate-specific sentence is present.
